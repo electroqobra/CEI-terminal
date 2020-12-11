@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>termynal.js example</title>
+        <meta charset="utf-8">
+        <!-- include the termynal stylesheet -->
+        <link rel="stylesheet" href="termynal.css">
+        <!-- some custom styles for the page -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
+        <style>
+            body {
+                padding: 0; margin: 0;
+                background: #1a1e24;
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box; display: -ms-flexbox; display: flex;
+                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- the termynal container -->
+        <div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700">
+            <span data-ty="input" data-ty-prompt="$">club join 'CEI'</span>
+            <span data-ty>Would you like to join 'CEI'?</span>
+            <span data-ty="input" data-ty-typeDelay="1000" data-ty-prompt="(y/n)">y</span>
+            <span data-ty="progress" data-ty-progressChar="·"></span>
+            <span data-ty>Joined 'CEI'!</span>
+            <span data-ty="input" data-ty-prompt="$">cd ~/clubs</span>
+            <span data-ty="input" data-ty-prompt="$ ~/clubs">git clone https://github.com/mhs-clubs/CEI.git</span>
+            <span data-ty="input" data-ty-prompt="$ ~/clubs (master)">git add .\README.md</span>
+            <span data-ty="input" data-ty-prompt="$ ~/clubs (master)">git commit -m "yourName + joined CEI!"</span>
+            <span data-ty="input" data-ty-prompt="$ ~/clubs (master)">git push</span>
+        </div>
+
+        <!-- include and initialise termynal.js -->
+        <script src="termynal.js" data-termynal-container="#termynal"></script>
+    </body>
+</html>
